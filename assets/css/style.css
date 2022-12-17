@@ -1,0 +1,65 @@
+:root {
+  font-size: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.user-card {
+  max-width: 400px;
+  width: 100%;
+  min-width: 200px;
+  margin: auto;
+
+  text-align: center;
+}
+
+.user-card__avatar>img {
+  clip-path: polygon(76% 0, 100% 70%, 50% 100%, 0% 70%, 24% 0);
+}
+
+.user-card:hover::after,
+.user-card:hover .user-card__name::before {
+  width: 100%;
+}
+
+.user-card::after,
+.user-card__name::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  background: #181617;
+  transition: 500ms;
+}
+
+.user-card::after {
+  left: 0;
+}
+
+.user-card__name::before {
+  right: 0;
+}
+
+.user-card,
+.user-card__name {
+  position: relative;
+}
